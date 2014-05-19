@@ -5,5 +5,5 @@ An alternative to [alphagov/vcloud-walker](https://github.com/alphagov/vcloud-wa
 ## Usage
 
 ```sh
-./bob-walker.sh
+go run bob-walker.go
 ```

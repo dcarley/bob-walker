@@ -20,16 +20,16 @@ This script simulates a bob walker
 
 OPTIONS:
   -h    Show this message
-  -s    Sport mode!
   -d    Drunk mode!
+  -s    Sport mode!
   -t    Turbo mode!
 `)
 }
 
 func main() {
 
-	sportMode := false
 	drunkMode := false
+	sportMode := false
 	turboMode := false
 
 	// Check for commandline options
@@ -37,10 +37,10 @@ func main() {
 	if len(cmdOpts) > 0 {
 		for _, opt := range cmdOpts {
 			switch opt {
-			case "-s":
-				sportMode = true
 			case "-d":
 				drunkMode = true
+			case "-s":
+				sportMode = true
 			case "-t":
 				turboMode = true
 			case "-h":

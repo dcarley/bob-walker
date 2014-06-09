@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
 	"os"
 	"path/filepath"
 	"strings"
@@ -63,7 +64,12 @@ func main() {
 	go talk(channel, phrases, sportMode, drunkMode)
 
 	for {
-		fmt.Println(<-channel)
+		select {
+		case msg := <-channel:
+			fmt.Println(msg)
+		case <-time.After(2 * time.Second):
+			fmt.Println("zzzzz...")
+		}
 	}
 }
 
@@ -77,7 +83,7 @@ func talk(channel chan string, phrases []string, sportMode bool, drunkMode bool)
 			channel <- phrase
 
 			if drunkMode {
-				time.Sleep(time.Second)
+				time.Sleep(time.Duration(rand.Intn(3)) * time.Second)
 			}
 		}
 	}

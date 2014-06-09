@@ -58,14 +58,23 @@ func main() {
 		phrases = append(phrases, "rugby")
 	}
 
-	// Eternal loop
+	channel := make(chan string)
+
+	go talk(channel, phrases, sportMode, drunkMode)
+
+	for {
+		fmt.Println(<-channel)
+	}
+}
+
+func talk(channel chan string, phrases []string, sportMode bool, drunkMode bool) {
 	for {
 		for _, phrase := range phrases {
 			if drunkMode {
 				phrase = strings.Replace(phrase, "e", "eeee", -1)
 			}
 
-			fmt.Println(phrase)
+			channel <- phrase
 
 			if drunkMode {
 				time.Sleep(time.Second)

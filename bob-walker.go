@@ -5,6 +5,7 @@ import (
 	"math/rand"
 	"os"
 	"path/filepath"
+	"runtime"
 	"strings"
 	"time"
 )
@@ -21,6 +22,7 @@ OPTIONS:
   -h    Show this message
   -s    Sport mode!
   -d    Drunk mode!
+  -t    Turbo mode!
 `)
 }
 
@@ -28,6 +30,7 @@ func main() {
 
 	sportMode := false
 	drunkMode := false
+	turboMode := false
 
 	// Check for commandline options
 	cmdOpts := os.Args[1:]
@@ -38,6 +41,8 @@ func main() {
 				sportMode = true
 			case "-d":
 				drunkMode = true
+			case "-t":
+				turboMode = true
 			case "-h":
 				print_usage()
 				os.Exit(0)
@@ -57,6 +62,10 @@ func main() {
 	if sportMode {
 		phrases = append(phrases, "cricket")
 		phrases = append(phrases, "rugby")
+	}
+
+	if turboMode {
+		runtime.GOMAXPROCS(runtime.NumCPU())
 	}
 
 	channel := make(chan string)

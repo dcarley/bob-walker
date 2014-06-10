@@ -4,6 +4,14 @@ An alternative to [alphagov/vcloud-walker](https://github.com/alphagov/vcloud-wa
 
 ## Usage
 
+### Bash
+
+```sh
+./bob-walker.sh
+```
+
+### Golang
+
 ```sh
 go run bob-walker.go
 ```

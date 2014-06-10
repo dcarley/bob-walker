@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"math/rand"
 	"os"
@@ -10,48 +11,24 @@ import (
 	"time"
 )
 
-func print_usage() {
-	// Get the name of the current executable
-	this_prog := filepath.Base(os.Args[0])
-
-	fmt.Print(`usage: ` + this_prog + ` options
-
-This script simulates a bob walker
-
-OPTIONS:
-  -h    Show this message
-  -d    Drunk mode!
-  -s    Sport mode!
-  -t    Turbo mode!
-`)
-}
-
 func main() {
 
-	drunkMode := false
-	sportMode := false
-	turboMode := false
+	var drunkMode, sportMode, turboMode bool
+	flag.BoolVar(&drunkMode, "d", false, "Drunk mode!")
+	flag.BoolVar(&sportMode, "s", false, "Sport mode!")
+	flag.BoolVar(&turboMode, "t", false, "Turbo mode!")
 
-	// Check for commandline options
-	cmdOpts := os.Args[1:]
-	if len(cmdOpts) > 0 {
-		for _, opt := range cmdOpts {
-			switch opt {
-			case "-d":
-				drunkMode = true
-			case "-s":
-				sportMode = true
-			case "-t":
-				turboMode = true
-			case "-h":
-				print_usage()
-				os.Exit(0)
-			default:
-				print_usage()
-				os.Exit(1)
-			}
-		}
+	flag.Usage = func() {
+		thisProg := filepath.Base(os.Args[0])
+		fmt.Fprintf(os.Stderr,
+			"usage: %s options\n\n"+
+				"This scripts simulates a bob walker\n\n"+
+				"OPTIONS:\n",
+			thisProg)
+		flag.PrintDefaults()
 	}
+
+	flag.Parse()
 
 	phrases := []string{
 		"beard",

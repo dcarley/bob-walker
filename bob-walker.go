@@ -12,9 +12,9 @@ import (
 
 func print_usage() {
 	// Get the name of the current executable
-	this_prog := filepath.Base(os.Args[0])
+	thisProg := filepath.Base(os.Args[0])
 
-	fmt.Print(`usage: ` + this_prog + ` options
+	fmt.Print(`usage: ` + thisProg + ` options
 
 This script simulates a bob walker
 

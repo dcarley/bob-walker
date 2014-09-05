@@ -1,16 +1,17 @@
 param(
-  [string]$s = "cricket",
-  [string]$x = "mince pie"
+  [string]$s,
+  [string]$x
 )
-
 while ($true){
   Write-Host "beard"
   Write-Host "beer"
   Write-Host "pie"
     If ($s -eq $true) {
-      Write-Host $s
+      Write-Host "rugby"
+      Write-Host "cricket"
     }
     If ($x -eq $true) {
-      Write-Host $x
+      Write-Host "mince pies"
+      Write-Host "reindeers"
     }
  }

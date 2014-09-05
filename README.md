@@ -19,7 +19,10 @@ awk -f bob-walker.awk [-v sport=true]
 ### Brainf--k (using [this python interpreter](https://github.com/garretraziel/mindfuck))
 
 ```
-../mindfuck/mindfuck.py bob-walker.fk
+# Normal mode
+echo "0" | ../mindfuck/mindfuck.py bob-walker.fk
+# Sport mode!
+echo "1" | ../mindfuck/mindfuck.py bob-walker.fk
 ```
 
 ### Go

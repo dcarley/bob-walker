@@ -1,0 +1,43 @@
++ We are entering this loop once a0=1
+[
+    >++++++++++ We are looping ten times so set a1=10
+    [
+        >++++++++++ move to a2 and inc 10
+        >+ move to a3 and inc 1
+        <<- move back to a1 and dec loop counter
+    ] We are now back at a1
+    Result of this is that:
+     a0 a1 a2  a3
+     1  0  100 10
+    >>>>, Move to a5 and read a chr
+    ------------ Decrement char by 48 as chr(1)=49 chr(0)=48
+    ------------
+    ------------
+    ------------
+    <<<< Move to a1
+    ++++++++++ set loop counter a1 to 10
+    [
+        >--.+++..+++++ +++++ +++.----- ----- ---- switch to a2 and print chr(98) chr(101) chr(101) chr(114) and then set a2=100 again which means print beer
+        >+++++.-----. switch to a3 inc 5 print chr(15) dec 5 print chr(10) print CRLF
+        << switch back to a1
+        >--.+++.----.+++++ +++++ +++++ ++.----- ----- ----. switch to a2 and print beard
+        >+++++.-----. CRLF
+        << back to a1
+        >+++++ +++++ ++.-------.----.- print pie
+        >+++++.-----. CRLF
+        << back to a1
+        >>>> forward to a5
+        [>+>+<<-]>>[<<+>>-]<< copy a5 to a6 using a7 as a staging area
+        > a6 will be our new loop counter if input char was 0 never enter this
+        [
+            <<<<< back to a1
+            >-.+++++++++++++++.---------.------.++++++++.------.+++++++++++++++. print cricket
+            >+++++.-----.
+            <<
+            >--.+++.--------------.-----.+++++++++++++++++++++++.--------------------- print rugby
+            >+++++.-----. now at a3
+            >>>- switch to a6 and dec
+        ] if in loop should exit after this
+        <<<<<- switch to a1 and dec loop counter
+    ]
+]

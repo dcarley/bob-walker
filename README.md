@@ -1,6 +1,6 @@
 # bob-walker
 
-An alternative to [alphagov/vcloud-walker](https://github.com/alphagov/vcloud-walker). Implemented in Bash and Go and Perl.
+An alternative to [alphagov/vcloud-walker](https://github.com/alphagov/vcloud-walker). Implemented in Bash and Go and Perl and Awk.
 
 ## Usage
 
@@ -20,4 +20,10 @@ go run bob-walker.go
 
 ```perl
 ./bob-walker.pl
+```
+
+### Awk
+
+```sh
+awk -f bob-walker.awk [-v sport=true]
 ```

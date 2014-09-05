@@ -4,10 +4,25 @@ An alternative to [alphagov/vcloud-walker](https://github.com/alphagov/vcloud-wa
 
 ## Usage
 
+### Awk
+
+```sh
+awk -f bob-walker.awk [-v sport=true]
+```
+
 ### Bash
 
 ```sh
 ./bob-walker.sh
+```
+
+### Brainf--k (using [this python interpreter](https://github.com/garretraziel/mindfuck))
+
+```
+# Normal mode
+echo "0" | ../mindfuck/mindfuck.py bob-walker.fk
+# Sport mode!
+echo "1" | ../mindfuck/mindfuck.py bob-walker.fk
 ```
 
 ### Go
@@ -20,10 +35,4 @@ go run bob-walker.go
 
 ```perl
 ./bob-walker.pl
-```
-
-### Awk
-
-```sh
-awk -f bob-walker.awk [-v sport=true]
 ```

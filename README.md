@@ -27,3 +27,9 @@ go run bob-walker.go
 ```sh
 awk -f bob-walker.awk [-v sport=true]
 ```
+
+### Brainf--k (using [this python interpreter](https://github.com/garretraziel/mindfuck))
+
+```
+../mindfuck/mindfuck.py bob-walker.fk
+```

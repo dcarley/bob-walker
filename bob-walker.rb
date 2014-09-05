@@ -7,5 +7,8 @@ loop do
     when "-s"
       puts "rugby"
       puts "cricket"
+    when "-x"
+      puts "mince pies"
+      puts "reindeer"
   end
 end

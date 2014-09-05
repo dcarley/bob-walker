@@ -36,3 +36,9 @@ go run bob-walker.go
 ```perl
 ./bob-walker.pl
 ```
+
+### PowerShell
+
+```powershell
+ps bob-walker.ps1
+```

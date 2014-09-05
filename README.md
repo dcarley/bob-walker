@@ -25,5 +25,5 @@ go run bob-walker.go
 ### Awk
 
 ```sh
-awk -f bob-walker.awk
+awk -f bob-walker.awk [-v sport=true]
 ```

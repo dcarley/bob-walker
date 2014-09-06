@@ -35,4 +35,11 @@ go run bob-walker.go
 
 ```perl
 ./bob-walker.pl
+
+### NASM Assembly
+
+```sh
+nasm -f macho bob-walker.asm
+ld -o bob-walker -e main bob-walker.o -macosx_version_min 10.4
+./bob-walker
 ```

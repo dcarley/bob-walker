@@ -25,6 +25,17 @@ echo "0" | ../mindfuck/mindfuck.py bob-walker.fk
 echo "1" | ../mindfuck/mindfuck.py bob-walker.fk
 ```
 
+### C
+
+```sh
+# To compile
+gcc -o bob-walker bob-walker.c
+# Normal mode
+./bob-walker
+# Sport mode!
+BOB_MODE=SPORT ./bob-walker
+```
+
 ### Go
 
 ```sh

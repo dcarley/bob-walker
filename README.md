@@ -57,6 +57,12 @@ go run bob-walker.go
 ./bob-walker.pl
 ```
 
+### Python
+
+```python
+./bob-walker.py
+```
+
 ### QBasic (QB64)
 
 Open `bob-walker.bas` using [QB64](http://www.qb64.net/) and hit `F5`.

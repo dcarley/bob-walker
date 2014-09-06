@@ -36,3 +36,9 @@ go run bob-walker.go
 ```perl
 ./bob-walker.pl
 ```
+
+### QBasic (QB64)
+
+Open `bob-walker.bas` using [QB64](http://www.qb64.net/) and hit `F5`.
+
+To exit the endless loop, hit `Ctrl + Break` or `Cmd + Q` on a Mac. To create a binary executable, hit `F11` in QB64.

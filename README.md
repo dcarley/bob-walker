@@ -64,6 +64,12 @@ ld -o bob-walker -e main bob-walker.o -macosx_version_min 10.4
 ./bob-walker
 ```
 
+### Python
+
+```python
+./bob-walker.py
+```
+
 ### QBasic (QB64)
 
 Open `bob-walker.bas` using [QB64](http://www.qb64.net/) and hit `F5`.

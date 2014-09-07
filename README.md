@@ -1,6 +1,15 @@
 # bob-walker
 
-An alternative to [alphagov/vcloud-walker](https://github.com/alphagov/vcloud-walker). Implemented in Bash and Go and Perl and Awk.
+An alternative to [alphagov/vcloud-walker](https://github.com/alphagov/vcloud-walker) in various languages.
+
+## Background
+
+While this might look like some kind of internet bullying, it's all in good fun and mostly sanctioned by the real namesake.
+
+Our team happens to have a Ruby project which walks through the API of a VMWare vCloud instance showing the various objects,
+which is called `vcloud-walker`. By happy coincidence, one of our team is called `bob walker`. It was funny to knock up a
+quick bob-walker implementation in shell one day, but this project has grown into a place where our team can create educational, 
+clever or funny implementations of the original shell script in our own time.
 
 ## Usage
 

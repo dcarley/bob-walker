@@ -51,6 +51,22 @@ BOB_MODE=SPORT ./bob-walker
 go run bob-walker.go
 ```
 
+### Linux character device driver
+
+```sh
+# Run this on a Linux box; example below is for Ubuntu
+#
+# Ensure linux-headers package is installed
+sudo apt-get install linux-headers-$(uname -r)
+# Build the kernel module
+cd kernel-bob
+make
+# Load the module
+sudo insmod bob-walker.ko
+# Read kernel message buffer for your next instructions
+dmesg
+```
+
 ### NASM Assembly
 
 ```sh

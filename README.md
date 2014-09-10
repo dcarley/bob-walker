@@ -51,10 +51,20 @@ BOB_MODE=SPORT ./bob-walker
 go run bob-walker.go
 ```
 
-### Perl
+### Linux character device driver
 
-```perl
-./bob-walker.pl
+```sh
+# Run this on a Linux box; example below is for Ubuntu
+#
+# Ensure linux-headers package is installed
+sudo apt-get install linux-headers-$(uname -r)
+# Build the kernel module
+cd kernel-bob
+make
+# Load the module
+sudo insmod bob-walker.ko
+# Read kernel message buffer for your next instructions
+dmesg
 ```
 
 ### NASM Assembly
@@ -63,6 +73,12 @@ go run bob-walker.go
 nasm -f macho bob-walker.asm
 ld -o bob-walker -e main bob-walker.o -macosx_version_min 10.4
 ./bob-walker
+```
+
+### Perl
+
+```perl
+./bob-walker.pl
 ```
 
 ### Python

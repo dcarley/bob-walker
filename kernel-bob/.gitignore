@@ -1,0 +1,7 @@
+.*
+!.gitignore
+bob-walker.ko
+bob-walker.mod.?
+bob-walker.o
+modules.order
+Module.symvers

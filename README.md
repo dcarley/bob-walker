@@ -60,6 +60,17 @@ BOB_MODE=SPORT ./bob-walker
 go run bob-walker.go
 ```
 
+### Haskell
+
+```sh
+# To compile
+ghc -o bob-walker bob-walker.hs
+# Normal mode
+./bob-walker
+# Sport mode!
+./bob-walker -s
+```
+
 ### Linux character device driver
 
 ```sh

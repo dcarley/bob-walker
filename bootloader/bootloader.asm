@@ -37,10 +37,10 @@ check_mode:             ; dl contains the character inputted
     jmp $               ; jump to far memory to hang
 
 print_string:           ; Expects null terminated message in si
-    mov al,[si]
+    mov al,[si]         ; Copy the character at si to register al
     or al,al            ; Comparing with itself will be 0 when al contains null
     jz  .end            ; Returns when al contains null
-    inc si
+    inc si              ; Move one character down the string
     call print_char
     jmp print_string
 .end:
@@ -54,10 +54,10 @@ print_char:
     retn
 
 get_char:
-    mov ah,0x00
-    int 0x16
-    call print_char
-    retn
+    mov ah,0x00         ; Read character requires 0 in ah register
+    int 0x16            ; Signal keyboard interrupt to BIOS
+    call print_char     ; Reading a char will leave its ascii value in ah, print_char prints from ah
+    retn                ; this should echo the char to the screen
 
 ;data
     PickMode db '[0] Normal Mode',0x0D,0x0A,'[1] Sport mode',0x0D,0x0A,0x0D,0x0A,'Pick a mode: ',0

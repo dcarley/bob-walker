@@ -25,6 +25,15 @@ awk -f bob-walker.awk [-v sport=true]
 ./bob-walker.sh
 ```
 
+### Bootloader
+
+```
+cd bootloader
+make
+```
+
+You can then run the outputted image as a floppy disk in VirtualBox.
+
 ### Brainf--k (using [this python interpreter](https://github.com/garretraziel/mindfuck))
 
 ```

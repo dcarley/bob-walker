@@ -24,7 +24,9 @@ final case object bobwalker {
         new_modes = new_modes :+ "rugby" :+ "cricket"
       case 'x' =>
         new_modes = new_modes :+ "mince pies" :+ "reindeer"
-      case _   => //do nothing
+      case _   =>
+        // if we do not have a case for the character
+        // then do nothing
     }
     new_modes
   }

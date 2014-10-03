@@ -19,15 +19,11 @@ final case object bobwalker {
       case 'd' =>
         println("Drunk mode not yet enabled")
       case 'p' =>
-        new_modes = new_modes :+ "chef"
-        new_modes = new_modes :+ "perl"
-        new_modes = new_modes :+ "CPAN"
+        new_modes = new_modes :+ "chef" :+ "perl" :+ "CPAN"
       case 's' => 
-        new_modes = new_modes :+ "rugby"
-        new_modes = new_modes :+ "cricket"
+        new_modes = new_modes :+ "rugby" :+ "cricket"
       case 'x' =>
-        new_modes = new_modes :+ "mince pies"
-        new_modes = new_modes :+ "reindeer"
+        new_modes = new_modes :+ "mince pies" :+ "reindeer"
       case _   => //do nothing
     }
     new_modes

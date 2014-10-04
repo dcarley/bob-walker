@@ -1,20 +1,20 @@
 object bobWalker {
 
   def main(args: Array[String]) {
-    val bobModes = process(args)
+    val bobModes = process(args.toSeq)
     startBob(bobModes)
   }
 
-  def process(args: Array[String]): Array[String] = {
-    val allArgs: Array[Char] = args.flatMap(x => x)
+  def process(args: Seq[String]): Seq[String] = {
+    val allArgs: Seq[Char] = args.flatMap(x => x)
     val bobModes = for {
       x <- allArgs
     } yield addMode(x)
     bobModes.flatMap(x => x)
   }
 
-  def addMode(letter: Char): Array[String] = {
-    var newModes: Array[String] = Array[String]("beard", "beer", "pie")
+  def addMode(letter: Char): Seq[String] = {
+    var newModes: Seq[String] = Seq[String]("beard", "beer", "pie")
     letter match {
       case 'd' =>
         println("Drunk mode not yet enabled")
@@ -31,7 +31,7 @@ object bobWalker {
     newModes
   }
 
-  def startBob(bobModes: Array[String]) = {
+  def startBob(bobModes: Seq[String]) = {
     var i = 0
     while (i < 1000000000) {
       printBob(bobModes)
@@ -39,7 +39,7 @@ object bobWalker {
     }
   }
 
-  def printBob(bobModes: Array[String]) = {
+  def printBob(bobModes: Seq[String]) = {
     for {
       x <- bobModes
     } println(x)

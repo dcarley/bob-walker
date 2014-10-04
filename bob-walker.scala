@@ -10,11 +10,11 @@ object bobWalker {
     val bobModes = for {
       x <- allArgs
     } yield addMode(x)
-    bobModes.flatMap(x => x)
+    bobModes.flatMap(x => x) :+ "beard" :+ "beer" :+ "pie"
   }
 
   def addMode(letter: Char): Seq[String] = {
-    var newModes: Seq[String] = Seq[String]("beard", "beer", "pie")
+    var newModes: Seq[String] = Seq[String]()
     letter match {
       case 'd' =>
         println("Drunk mode not yet enabled")

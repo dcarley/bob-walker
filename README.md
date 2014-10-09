@@ -101,3 +101,9 @@ ld -o bob-walker -e main bob-walker.o -macosx_version_min 10.4
 Open `bob-walker.bas` using [QB64](http://www.qb64.net/) and hit `F5`.
 
 To exit the endless loop, hit `Ctrl + Break` or `Cmd + Q` on a Mac. To create a binary executable, hit `F11` in QB64.
+
+### Scala
+
+```scala
+scala bob-walker.scala
+```

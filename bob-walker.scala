@@ -33,10 +33,8 @@ object bobWalker {
   }
 
   def startBob(bobModes: Seq[String]) = {
-    var i = 0
-    while (i < 1000000000) {
+    for (i <- 1 until 1000000000) {
       printBob(bobModes)
-      i = i + 1
     }
   }
 

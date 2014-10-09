@@ -6,10 +6,10 @@ object bobWalker {
   }
 
   def process(args: Seq[String]): Seq[String] = {
-    val allArgs: Seq[Char] = args.flatMap(x => x)
     val bobModes: Seq[String] = for {
-      arg <- allArgs
-      modes <- addMode(arg)
+      arg <- args
+      char <- arg
+      modes <- addMode(char)
     } yield modes
     bobModes :+ "beard" :+ "beer" :+ "pie"
   }

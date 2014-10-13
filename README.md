@@ -54,6 +54,13 @@ gcc -o bob-walker bob-walker.c
 BOB_MODE=SPORT ./bob-walker
 ```
 
+### Erlang
+
+```
+apt-get install erlang || brew install erlang
+./bob-walker.erl [--drunk] [--sport] [--programming] [--xmas]
+```
+
 ### Go
 
 ```sh

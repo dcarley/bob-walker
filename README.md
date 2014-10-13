@@ -118,3 +118,10 @@ To exit the endless loop, hit `Ctrl + Break` or `Cmd + Q` on a Mac. To create a 
 ```scala
 scala bob-walker.scala
 ```
+
+### Erlang
+
+```
+apt-get install erlang || brew install erlang
+./bob-walker.erl [--drunk] [--sport] [--programming] [--xmas]
+```

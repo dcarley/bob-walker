@@ -2,12 +2,11 @@
 
 main(Args) ->
     Words = get_words(Args),
-    WordsFinal = case lists:member("--drunk", Args) of
-        true -> slur(Words);
-        false -> Words
-    end,
 
-    speak(WordsFinal).
+    case lists:member("--drunk", Args) of
+        true -> speak(slur(Words), 1000);
+        false -> speak(Words)
+    end.
 
 get_words(Args) ->
     Base = ["beer", "beard", "pie"],
@@ -32,6 +31,12 @@ slur(Words) ->
 
 speak(Words) ->
     Speaker = fun(Word) -> io:format("~s~n", [Word]) end,
-    lists:foreach(Speaker, Words),
+    rant(Speaker, Words).
 
-    speak(Words).
+speak(Words, Delay) ->
+    Speaker = fun(Word) -> io:format("~s~n", [Word]), timer:sleep(Delay) end,
+    rant(Speaker, Words).
+
+rant(Speaker, Words) ->
+    lists:foreach(Speaker, Words),
+    rant(Speaker, Words).

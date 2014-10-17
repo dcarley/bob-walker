@@ -13,7 +13,7 @@ main = do
   let bob = S.fromList args
       vocabulary = selectVocabulary bob
 
-  mapM putStrLn (nextWord bob vocabulary)
+  mapM putStrLn (nextWord 1 bob vocabulary)
 
 selectVocabulary :: S.Set String -> [String]
 selectVocabulary bob =
@@ -39,9 +39,11 @@ isRandom bob = hasFlag bob ["--random", "-r"]
 
 -- Returns a list of words given a bob in some sort of state, and a list of
 -- possible words to pick from
-nextWord :: S.Set String -> [String] -> [String]
-nextWord bob w = (w !! i) : nextWord bob w
-                 where i = unsafePerformIO (randomRIO (0, (length w) - 1))
+nextWord :: Int -> S.Set String -> [String] -> [String]
+nextWord c bob w = if isRandom bob 
+                   then (w !! i) : nextWord (c + 1) bob w
+                   else (w !! (c `mod` length w)) : nextWord (c + 1) bob w
+                   where i = unsafePerformIO (randomRIO (0, (length w) - 1))
 
 -- Takes the current state and a list of flags to check for
 -- Returns true if any of the flags is in the current state, otherwise false.

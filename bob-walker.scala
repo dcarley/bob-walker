@@ -46,7 +46,7 @@ object bobWalker {
   def startBob(bobModes: Seq[String]) = {
     for (i <- 1 until 1000000000) {
       printBob(bobModes)
-      if (drunk) { Thread.sleep(2000) }
+      if (drunk) { Thread.sleep(1000) }
     }
   }
 

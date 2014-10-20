@@ -1,8 +1,11 @@
 object bobWalker {
 
+  var drunk = false
+
   def main(args: Array[String]) {
     val bobModes = process(args.toSeq)
-    startBob(bobModes)
+    val hydratedBobModes = hydrate(bobModes)
+    startBob(hydratedBobModes)
   }
 
   def process(args: Seq[String]): Seq[String] = {
@@ -18,7 +21,7 @@ object bobWalker {
     var newModes: Seq[String] = Seq[String]()
     letter match {
       case 'd' =>
-        println("Drunk mode not yet enabled")
+        drunk = true
       case 'p' =>
         newModes = newModes :+ "chef" :+ "perl" :+ "CPAN"
       case 's' => 
@@ -32,9 +35,18 @@ object bobWalker {
     newModes
   }
 
+  def hydrate(bobModes: Seq[String]) = {
+    if (drunk) {
+      bobModes.map( word  => word.replace("e", "eee") )
+    } else {
+      bobModes
+    }
+  }
+
   def startBob(bobModes: Seq[String]) = {
     for (i <- 1 until 1000000000) {
       printBob(bobModes)
+      if (drunk) { Thread.sleep(1000) }
     }
   }
 

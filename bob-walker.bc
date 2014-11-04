@@ -1,6 +1,18 @@
 /* bob walker implemented in bc(1) */
+
+print "\n"
+print "When prompted, enter 0 (no) or 1 (yes) to answer.\n\n"
+print "Enable sport mode? "; sport_mode = read()
+
 while (1) {
   print "beer\n"
   print "beard\n"
   print "pie\n"
+
+  if (sport_mode > 0)
+  {
+    print "cricket\n"
+    print "rugby\n"
+    print "tug of war\n"
+  }
 }

@@ -25,6 +25,12 @@ awk -f bob-walker.awk [-v sport=true]
 ./bob-walker.sh
 ```
 
+### bc
+
+```sh
+bc bob-walker.bc
+```
+
 ### Bootloader
 
 ```

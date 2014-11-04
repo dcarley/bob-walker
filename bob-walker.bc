@@ -1,0 +1,6 @@
+/* bob walker implemented in bc(1) */
+while (1) {
+  print "beer\n"
+  print "beard\n"
+  print "pie\n"
+}

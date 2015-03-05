@@ -1,0 +1,33 @@
+/* bob walker implemented in bc(1) */
+
+print "\n"
+print "When prompted, enter 0 (no) or 1 (yes) to answer.\n\n"
+print "Enable programming mode? "; dev_mode = read()
+print "Enable sport mode? "; sport_mode = read()
+print "Enable Christmas mode? "; xmas_mode = read()
+
+while (1) {
+  print "beer\n"
+  print "beard\n"
+  print "pie\n"
+
+  if (dev_mode > 0)
+  {
+    print "chef\n"
+    print "CPAN\n"
+    print "perl\n"
+  }
+
+  if (sport_mode > 0)
+  {
+    print "cricket\n"
+    print "rugby\n"
+    print "tug of war\n"
+  }
+
+  if (xmas_mode > 0)
+  {
+    print "reindeer\n"
+    print "mince pies\n"
+  }
+}

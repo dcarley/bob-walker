@@ -8,7 +8,7 @@ While this might look like some kind of internet bullying, it's all in good fun 
 
 Our team happens to have a Ruby project which walks through the API of a VMWare vCloud instance showing the various objects,
 which is called `vcloud-walker`. By happy coincidence, one of our team is called `bob walker`. It was funny to knock up a
-quick bob-walker implementation in shell one day, but this project has grown into a place where our team can create educational, 
+quick bob-walker implementation in shell one day, but this project has grown into a place where our team can create educational,
 clever or funny implementations of the original shell script in our own time.
 
 ## Usage
@@ -130,4 +130,11 @@ To exit the endless loop, hit `Ctrl + Break` or `Cmd + Q` on a Mac. To create a 
 
 ```scala
 scala bob-walker.scala
+```
+
+### [Trollscript](https://github.com/tombell/trollscript)
+
+```
+gem install trollscript
+trollscript bob-walker.troll
 ```
